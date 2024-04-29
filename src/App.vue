@@ -14,6 +14,8 @@
 
   <h2 v-show="showElement">using v-show</h2>
   <h2 v-if="showElement">using v-if</h2>
+
+  <h3 v-for="(name, index) in names" :key="name">{{ name }}{{ index }}</h3>
 </template>
 
 <script>
@@ -23,7 +25,8 @@ export default {
     return {
       num: 1,
       display: true,
-      showElement: false
+      showElement: false,
+      names: ['esther', 'clark', 'diana']
     }
   }
 }
