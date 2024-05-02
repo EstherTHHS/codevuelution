@@ -7,11 +7,8 @@
 import ComponentE from './ComponentE.vue'
 
 export default {
-  components: { ComponentE },
   name: 'ComponentC',
-  props: {
-    ComponentE
-  }
+  components: { ComponentE }
 }
 </script>
 
