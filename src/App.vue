@@ -1,19 +1,33 @@
 <script setup></script>
 
 <template>
-  <p>Message is: {{ message }}</p>
-  <input v-model="message" placeholder="edit me" />
+  <!-- <Greet name="rooney" nick-mame="shlc" />
+  <Greet name="thhs" nickName="esther" />
+  <Greet :name="name" :nickName="channel" /> -->
+
+  <Article id="art" title="article title" :likes="50" :isPublished="true" />
 </template>
 
 <script>
+import Greet from './components/Greet.vue'
+import Article from './components/Article.vue'
+
 export default {
   name: 'App',
   setup() {
-    return {
-      message: ''
-    }
+    return {}
   },
-  methods: {}
+  methods: {},
+  components: {
+    Greet,
+    Article
+  },
+  data() {
+    return {
+      name: 'asdf',
+      channel: 'Code'
+    }
+  }
 }
 </script>
 
