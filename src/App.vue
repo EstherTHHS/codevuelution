@@ -1,16 +1,12 @@
 <script setup></script>
 
 <template>
-  <!-- <Greet name="rooney" nick-mame="shlc" />
-  <Greet name="thhs" nickName="esther" />
-  <Greet :name="name" :nickName="channel" /> -->
-
-  <Article id="art" title="article title" :likes="50" :isPublished="true" />
+  <h3>AppComponent username {{ name }}</h3>
+  <ComponentC />
 </template>
 
 <script>
-import Greet from './components/Greet.vue'
-import Article from './components/Article.vue'
+import ComponentC from './components/ComponentC.vue'
 
 export default {
   name: 'App',
@@ -19,13 +15,16 @@ export default {
   },
   methods: {},
   components: {
-    Greet,
-    Article
+    ComponentC
   },
   data() {
     return {
-      name: 'asdf',
-      channel: 'Code'
+      name: 'Roony'
+    }
+  },
+  provide() {
+    return {
+      username: this.name
     }
   }
 }
